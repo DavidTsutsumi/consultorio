@@ -23,8 +23,8 @@ $result = $especialidad->getAll();
                     <td><?php echo $row['IdEspecialidad']; ?></td>
                     <td><?php echo $row['Nombre']; ?></td>
                     <td>
-                        <a href="view.php?id=<?php echo $row['IdEspecialidad']; ?>" class="btn btn-info">Ver</a>
-                        <a href="edit.php?id=<?php echo $row['IdEspecialidad']; ?>" class="btn btn-warning">Editar</a>
+                        <a href="viewEspecialidad.php?id=<?php echo $row['IdEspecialidad']; ?>" class="btn btn-info">Ver</a>
+                        <a href="editEspecialidad.php?id=<?php echo $row['IdEspecialidad']; ?>" class="btn btn-warning">Editar</a>
                         <form action="../../controllers/EspecialidadController.php" method="post" style="display:inline;">
                             <input type="hidden" name="action" value="delete">
                             <input type="hidden" name="id" value="<?php echo $row['IdEspecialidad']; ?>">

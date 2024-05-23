@@ -37,15 +37,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         switch ($_POST['action']) {
             case 'create':
                 $controller->create($_POST['nombre']);
-                header("location: ../views/especialidad/index.php");
+                header("location: ../views/especialidad/indexEspecialidad.php");
                 break;
             case 'edit':
                 $controller->edit($_POST['id'], $_POST['nombre']);
-                header("location: ../views/especialidad/index.php");
+                header("location: ../views/especialidad/indexEspecialidad.php");
                 break;
             case 'delete':
                 $controller->delete($_POST['id']);
-                header("location: ../views/especialidad/index.php");
+                header("location: ../views/especialidad/indexEspecialidad.php");
                 break;
         }
     }

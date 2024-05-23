@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario'])) {
+    // El usuario no ha iniciado sesión, redirigir a la página de inicio de sesión
+    header("Location: index.php");
+    exit();
+}
+?>
+
 
 
 <!DOCTYPE html>
@@ -19,18 +29,18 @@
    <!-- bootstrap css -->
    <link rel="stylesheet" href="../../css/bootstrap.min.css">
    <!-- style css -->
-   <link rel="stylesheet" href="../..//css/style.css">
+   <link rel="stylesheet" href="css/style.css">
    <!-- Responsive-->
-   <link rel="stylesheet" href="../../css/responsive.css">
+   <link rel="stylesheet" href="css/responsive.css">
    <!-- fevicon -->
    <link rel="icon" href="images/fevicon.png" type="image/gif" />
    <!-- Scrollbar Custom CSS -->
-   <link rel="stylesheet" href="../../css/jquery.mCustomScrollbar.min.css">
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
    <!-- Tweaks for older IEs-->
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    <!-- owl stylesheets -->
-   <link rel="stylesheet" href="../../css/owl.carousel.min.css">
-   <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 </head>
 
@@ -68,3 +78,13 @@
             </ul>
          </div>
       </nav>
+
+<div class="container mt-5">
+    <h1>Consultorio médico online</h1>
+    <p>Médicos especialistas</p>
+    <a href="views/especialidad/indexEspecialidad.php" class="btn btn-primary">Gestionar Especialidades</a>
+    <a href="views/usuario/indexUsuario.php" class="btn btn-primary" >Usuarios</a>
+    <!-- Agrega más enlaces o botones para acceder a otras vistas -->
+</div>
+
+<?php include 'views/component/footer.php'; ?>

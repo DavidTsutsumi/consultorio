@@ -18,6 +18,6 @@ $row = mysqli_fetch_assoc($result);
         <label>Nombre</label>
         <p class="form-control"><?php echo $row['Nombre']; ?></p>
     </div>
-    <a href="index.php" class="btn btn-primary">Volver</a>
+    <a href="indexEspecialidad.php" class="btn btn-primary">Volver</a>
 </div>
 <?php include '../component/footer.php'; ?>
