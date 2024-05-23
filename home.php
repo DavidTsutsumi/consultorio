@@ -33,7 +33,7 @@ if (!isset($_SESSION['usuario'])) {
    <!-- Responsive-->
    <link rel="stylesheet" href="css/responsive.css">
    <!-- fevicon -->
-   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <link rel="icon" href="img/fevicon.png" type="image/gif" />
    <!-- Scrollbar Custom CSS -->
    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
    <!-- Tweaks for older IEs-->
@@ -48,14 +48,14 @@ if (!isset($_SESSION['usuario'])) {
    <!-- header section start -->
    <div class="header_section">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-         <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+         <div class="logo"><img src="img/logo.png" width="50px"></a></div>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home</a>
+                  <a class="nav-link" href="home.php">Inicio</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="health.html">Health</a>
@@ -73,7 +73,7 @@ if (!isset($_SESSION['usuario'])) {
                   <a class="nav-link" href="contact.html">Contact Us</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#"><img src="images/search-icon.png"></a>
+                  <a class="nav-link" href="#"><img src="img/search-icon.png"></a>
                </li>
             </ul>
          </div>
@@ -84,7 +84,251 @@ if (!isset($_SESSION['usuario'])) {
     <p>Médicos especialistas</p>
     <a href="views/especialidad/indexEspecialidad.php" class="btn btn-primary">Gestionar Especialidades</a>
     <a href="views/usuario/indexUsuario.php" class="btn btn-primary" >Usuarios</a>
+    <a href="views/horario/indexHorario.php" class="btn btn-primary" >Horarios</a>
     <!-- Agrega más enlaces o botones para acceder a otras vistas -->
 </div>
+<div id="main_slider" class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="banner_section">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h1 class="banner_taital">Consultorio <br><span style="color: #151515;">Médico Online</span></h1>
+                           <p class="banner_text">There are many variations of passages of Lorem Ipsum</p>
+                           <div class="btn_main">
+                              <div class="more_bt"><a href="#">Contact Now</a></div>
+                              <div class="contact_bt"><a href="#">Get A Quote</a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="image_1"><img src="img/1.jpg"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="banner_section">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h1 class="banner_taital">Consultorio <br><span style="color: #151515;">Médico Online</span></h1>
+                           <p class="banner_text">There are many variations of passages of Lorem Ipsum</p>
+                           <div class="btn_main">
+                              <div class="more_bt"><a href="#">Contact Now</a></div>
+                              <div class="contact_bt"><a href="#">Get A Quote</a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="image_1"><img src="img/2.jpeg"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="banner_section">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h1 class="banner_taital">Consultorio <br><span style="color: #151515;">Médico Online</span></h1>
+                           <p class="banner_text">There are many variations of passages of Lorem Ipsum</p>
+                           <div class="btn_main">
+                              <div class="more_bt"><a href="#">Contact Now</a></div>
+                              <div class="contact_bt"><a href="#">Get A Quote</a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="image_1"><img src="img/3.jpeg"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+            <i class="fa fa-long-arrow-left" style="font-size:24px; padding-top: 4px;"></i>
+         </a>
+         <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+            <i class="fa fa-long-arrow-right" style="font-size:24px; padding-top: 4px;"></i>
+         </a>
+      </div>
+   </div>
+   <!-- banner section end -->
+   <!-- health section start -->
+   <div class="health_section layout_padding">
+      <div class="container">
+         <h1 class="health_taital">Best Of Health care for you</h1>
+         <p class="health_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+         <div class="health_section layout_padding">
+            <div class="row">
+               <div class="col-sm-7">
+                  <div class="image_main">
+                     <div class="main">
+                        <img src="img/img-2.png" alt="Avatar" class="image" style="width:100%">
+                     </div>
+                     <div class="middle">
+                        <div class="text"><img src="img/icon-1.png" style="width: 40px;"></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-5">
+                  <div class="image_main_1">
+                     <div class="main">
+                        <img src="img/img-3.png" alt="Avatar" class="image" style="width:100%">
+                     </div>
+                     <div class="middle">
+                        <div class="text"><img src="img/icon-1.png" style="width: 40px;"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="getquote_bt_1"><a href="#">Read More <span><img src="img/right-arrow.png"></span></a></div>
+         </div>
+      </div>
+   </div>
+   <!-- health section end -->
+   <!-- knowledge section end -->
+   <div class="knowledge_section layout_padding">
+      <div class="container">
+         <div class="knowledge_main">
+            <div class="left_main">
+               <h1 class="knowledge_taital">Knowledge of center</h1>
+               <p class="knowledge_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
+            <div class="right_main">
+               <div class="play_icon"><a href="#"><img src="img/play-icon.png"></a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- knowledge section end -->
+   <!-- news section start -->
+   <div class="news_section layout_padding">
+      <div class="container">
+         <h1 class="health_taital">Why choose 24hr home care</h1>
+         <p class="health_text">labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+         <div class="news_section_2 layout_padding">
+            <div class="row">
+               <div class="col-lg-4 col-sm-6">
+                  <div class="box_main">
+                     <div class="icon_1"><img src="img/icon-2.png"></div>
+                     <h4 class="daily_text">Daily care experts</h4>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-6">
+                  <div class="box_main active">
+                     <div class="icon_1"><img src="img/icon-3.png"></div>
+                     <h4 class="daily_text_1">Available 24/7</h4>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-6">
+                  <div class="box_main">
+                     <div class="icon_1"><img src="img/icon-4.png"></div>
+                     <h4 class="daily_text_1">Balanced care</h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="getquote_bt"><a href="#">Get A Quote <span><img src="img/right-arrow.png"></span></a></div>
+      </div>
+   </div>
+   <!-- news section end -->
+   <!-- contact section start -->
+   <div class="contact_section layout_padding">
+      <div class="container">
+         <h1 class="contact_taital">What we do</h1>
+         <div class="news_section_2">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="icon_main">
+                     <div class="icon_7"><img src="img/icon-7.png"></div>
+                     <h4 class="diabetes_text">Diabetes and obesity Counselling </h4>
+                  </div>
+                  <div class="icon_main">
+                     <div class="icon_7"><img src="img/icon-5.png"></div>
+                     <h4 class="diabetes_text">Obstetrics and Gynsecology</h4>
+                  </div>
+                  <div class="icon_main">
+                     <div class="icon_7"><img src="img/icon-6.png"></div>
+                     <h4 class="diabetes_text">Surgical and medical Oncology</h4>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="contact_box">
+                     <h1 class="book_text">Book Appoinment</h1>
+                     <input type="text" class="Email_text" placeholder="Name" name="Name">
+                     <input type="text" class="Email_text" placeholder="Name" name="Name">
+                     <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                     <div class="send_bt"><a href="#">SEND</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- contact section end -->
+   <!-- client section start -->
+   <div class="client_section layout_padding">
+      <div id="my_slider" class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="container">
+                  <h1 class="client_taital">What People Say</h1>
+                  <p class="client_text">It is a long established fact that a reader will be distracted </p>
+                  <div class="client_section_2">
+                     <div class="client_left">
+                        <div><img src="img/client-img.png" class="client_img"></div>
+                     </div>
+                     <div class="client_right">
+                        <h3 class="distracted_text">Distracted by</h3>
+                        <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+                        <div class="quote_icon"><img src="img/quote-icon.png"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container">
+                  <h1 class="client_taital">What People Say</h1>
+                  <p class="client_text">It is a long established fact that a reader will be distracted </p>
+                  <div class="client_section_2">
+                     <div class="client_left">
+                        <div><img src="img/client-img.png" class="client_img"></div>
+                     </div>
+                     <div class="client_right">
+                        <h3 class="distracted_text">Distracted by</h3>
+                        <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+                        <div class="quote_icon"><img src="img/quote-icon.png"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container">
+                  <h1 class="client_taital">What People Say</h1>
+                  <p class="client_text">It is a long established fact that a reader will be distracted </p>
+                  <div class="client_section_2">
+                     <div class="client_left">
+                        <div><img src="img/client-img.png" class="client_img"></div>
+                     </div>
+                     <div class="client_right">
+                        <h3 class="distracted_text">Distracted by</h3>
+                        <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+                        <div class="quote_icon"><img src="img/quote-icon.png"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+            <i class="fa fa-long-arrow-left" style="font-size:24px; padding-top: 4px;"></i>
+         </a>
+         <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+            <i class="fa fa-long-arrow-right" style="font-size:24px; padding-top: 4px;"></i>
+         </a>
+      </div>
+   </div>
 
 <?php include 'views/component/footer.php'; ?>

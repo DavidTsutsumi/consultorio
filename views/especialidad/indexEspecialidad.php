@@ -8,7 +8,7 @@ $result = $especialidad->getAll();
 ?>
 <div class="container">
     <h2>Lista de Especialidades</h2>
-    <a href="create.php" class="btn btn-primary">Agregar Especialidad</a>
+    <a href="createEspecialidad.php" class="btn btn-primary">Agregar Especialidad</a>
     <table class="table table-bordered">
         <thead>
             <tr>

@@ -38,14 +38,14 @@
    <!-- header section start -->
    <div class="header_section">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-         <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+         <div class="logo"><img src="../../img/logo.png" width="50px"></a></div>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home</a>
+                  <a class="nav-link" href="../../home.php">Inicio</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="health.html">Health</a>
