@@ -3,30 +3,28 @@
       <div class="container">
          <div class="row">
             <div class="col-lg-3 col-sm-6">
-               <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
-               <h1 class="adderss_text">Contact Us</h1>
-               <div class="map_icon"><img src="images/map-icon.png"><span class="paddlin_left_0">Page when looking at its</span></div>
-               <div class="map_icon"><img src="images/call-icon.png"><span class="paddlin_left_0">+7586656566</span></div>
-               <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_0">volim@gmail.com</span></div>
+               
+               <h1 class="adderss_text">Contactanos</h1>
+               <div class="map_icon"><img src="../../img/map-icon.png"><span class="paddlin_left_0">Cuajimalpa</span></div>
+               <div class="map_icon"><img src="../../img/call-icon.png"><span class="paddlin_left_0">+5509601271</span></div>
+               <div class="map_icon"><img src="../../img/mail-icon.png"><span class="paddlin_left_0">volim@gmail.com</span></div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Doctors</h1>
-               <div class="hiphop_text_1">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</div>
+            <div class="col-lg-6 col-sm-6">
+               <h1 class="adderss_text">Doctores</h1>
+               <div class="hiphop_text_1">Contamos con un equipo de médicos altamente calificados y experimentados en diversas especialidades,
+                   quienes se comprometen a brindar un trato personalizado y de alta calidad a cada uno de nuestros pacientes.
+               </div>
             </div>
+           
             <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Useful Links</h1>
-               <div class="Useful_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered ,</div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Newsletter</h1>
-               <input type="text" class="Enter_text" placeholder="Enter your Emil" name="Enter your Emil">
-               <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+               <h1 class="adderss_text">Siguenos en</h1>
+               
                <div class="social_icon">
                   <ul>
-                     <li><a href="#"><img src="images/fb-icon.png"></a></li>
-                     <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-                     <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
-                     <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                     <li><a href="#"><img src="../../img/fb-icon.png"></a></li>
+                     <li><a href="#"><img src="../../img/twitter-icon.png"></a></li>
+                     <li><a href="#"><img src="../../img/linkedin-icon.png"></a></li>
+                     <li><a href="#"><img src="../../img/instagram-icon.png"></a></li>
                   </ul>
                </div>
             </div>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,7 +10,7 @@
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
    <title>Sistema CRUD</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -32,6 +30,10 @@
    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -48,22 +50,26 @@
                   <a class="nav-link" href="../../home.php">Inicio</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="health.html">Health</a>
+                  <a class="nav-link" href="health.html">Citas</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="medicine.html">Medicine</a>
+                  <a class="nav-link" href="../../views/horario/indexHorario.php">Horarios</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="news.html">News</a>
+                  <a class="nav-link" href="../../views/especialidad/indexEspecialidad.php">Especialidades</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Más opciones
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <a class="dropdown-item" href="#">Historial médico</a>
+                     <a class="dropdown-item" href="../../views/usuario/indexUsuario.php">Usuarios</a>
+                     <a class="dropdown-item" href="#">Opción 3</a>
+                  </div>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="client.html">Client</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#"><img src="images/search-icon.png"></a>
+                  <a class="nav-link" href="../../logout.php">Cerrar sesión</a>
                </li>
             </ul>
          </div>

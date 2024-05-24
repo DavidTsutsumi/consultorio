@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $conexion = mysqli_connect("localhost", "tsatsu", "hola123", "consultorio");
 
-    // Evitar inyección de SQL utilizando consultas preparadas
+    
     $consulta = "SELECT * FROM Usuarios WHERE TipoUsuario=? AND Password=?";
     $stmt = mysqli_prepare($conexion, $consulta);
     mysqli_stmt_bind_param($stmt, "ss", $usuario, $contraseña);

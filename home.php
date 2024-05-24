@@ -2,9 +2,9 @@
 session_start();
 
 if (!isset($_SESSION['usuario'])) {
-    // El usuario no ha iniciado sesión, redirigir a la página de inicio de sesión
-    header("Location: index.php");
-    exit();
+   // El usuario no ha iniciado sesión, redirigir a la página de inicio de sesión
+   header("Location: index.php");
+   exit();
 }
 ?>
 
@@ -22,12 +22,12 @@ if (!isset($_SESSION['usuario'])) {
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
    <title>Sistema CRUD</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
    <!-- bootstrap css -->
-   <link rel="stylesheet" href="../../css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
    <!-- style css -->
    <link rel="stylesheet" href="css/style.css">
    <!-- Responsive-->
@@ -58,36 +58,31 @@ if (!isset($_SESSION['usuario'])) {
                   <a class="nav-link" href="home.php">Inicio</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="health.html">Health</a>
+                  <a class="nav-link" href="health.html">Citas</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="medicine.html">Medicine</a>
+                  <a class="nav-link" href="views/horario/indexHorario.php">Horarios</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="news.html">News</a>
+                  <a class="nav-link" href="views/especialidad/indexEspecialidad.php">Especialidades</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Más opciones
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <a class="dropdown-item" href="#">Historial médico</a>
+                     <a class="dropdown-item" href="views/usuario/indexUsuario.php">Usuarios</a>
+                     <a class="dropdown-item" href="#">Opción 3</a>
+                  </div>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="client.html">Client</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#"><img src="img/search-icon.png"></a>
+                  <a class="nav-link" href="logout.php">Cerrar sesión</a>
                </li>
             </ul>
          </div>
       </nav>
-
-<div class="container mt-5">
-    <h1>Consultorio médico online</h1>
-    <p>Médicos especialistas</p>
-    <a href="views/especialidad/indexEspecialidad.php" class="btn btn-primary">Gestionar Especialidades</a>
-    <a href="views/usuario/indexUsuario.php" class="btn btn-primary" >Usuarios</a>
-    <a href="views/horario/indexHorario.php" class="btn btn-primary" >Horarios</a>
-    <!-- Agrega más enlaces o botones para acceder a otras vistas -->
-</div>
-<div id="main_slider" class="carousel slide" data-ride="carousel">
+      <div id="main_slider" class="carousel slide" data-ride="carousel">
          <div class="carousel-inner">
             <div class="carousel-item active">
                <div class="banner_section">
@@ -95,10 +90,10 @@ if (!isset($_SESSION['usuario'])) {
                      <div class="row">
                         <div class="col-md-6">
                            <h1 class="banner_taital">Consultorio <br><span style="color: #151515;">Médico Online</span></h1>
-                           <p class="banner_text">There are many variations of passages of Lorem Ipsum</p>
+                           <p class="banner_text">Consulta médica online, la nueva forma de cuidar de ti.</p>
                            <div class="btn_main">
-                              <div class="more_bt"><a href="#">Contact Now</a></div>
-                              <div class="contact_bt"><a href="#">Get A Quote</a></div>
+                              <div class="more_bt"><a href="#">Reserva tu cita</a></div>
+                              <div class="contact_bt"><a href="#">Contactanos</a></div>
                            </div>
                         </div>
                         <div class="col-md-6">
@@ -114,10 +109,10 @@ if (!isset($_SESSION['usuario'])) {
                      <div class="row">
                         <div class="col-md-6">
                            <h1 class="banner_taital">Consultorio <br><span style="color: #151515;">Médico Online</span></h1>
-                           <p class="banner_text">There are many variations of passages of Lorem Ipsum</p>
+                           <p class="banner_text">Consulta médica online, la nueva forma de cuidar de ti.</p>
                            <div class="btn_main">
-                              <div class="more_bt"><a href="#">Contact Now</a></div>
-                              <div class="contact_bt"><a href="#">Get A Quote</a></div>
+                              <div class="more_bt"><a href="#">Reserva tu cita</a></div>
+                              <div class="contact_bt"><a href="#">Contactanos</a></div>
                            </div>
                         </div>
                         <div class="col-md-6">
@@ -133,10 +128,10 @@ if (!isset($_SESSION['usuario'])) {
                      <div class="row">
                         <div class="col-md-6">
                            <h1 class="banner_taital">Consultorio <br><span style="color: #151515;">Médico Online</span></h1>
-                           <p class="banner_text">There are many variations of passages of Lorem Ipsum</p>
+                           <p class="banner_text">Consulta médica online, la nueva forma de cuidar de ti.</p>
                            <div class="btn_main">
-                              <div class="more_bt"><a href="#">Contact Now</a></div>
-                              <div class="contact_bt"><a href="#">Get A Quote</a></div>
+                              <div class="more_bt"><a href="#">Reserva tu cita</a></div>
+                              <div class="contact_bt"><a href="#">Contactanos</a></div>
                            </div>
                         </div>
                         <div class="col-md-6">
@@ -147,120 +142,116 @@ if (!isset($_SESSION['usuario'])) {
                </div>
             </div>
          </div>
+
+
          <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
             <i class="fa fa-long-arrow-left" style="font-size:24px; padding-top: 4px;"></i>
          </a>
          <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
             <i class="fa fa-long-arrow-right" style="font-size:24px; padding-top: 4px;"></i>
          </a>
+
+
       </div>
    </div>
    <!-- banner section end -->
    <!-- health section start -->
    <div class="health_section layout_padding">
       <div class="container">
-         <h1 class="health_taital">Best Of Health care for you</h1>
-         <p class="health_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+         <h1 class="health_taital">Mejores especialistas</h1>
+         <p class="health_text">Nuestros especialistas en dermatología, nutrición y más están aquí para cuidar de tu salud con atención
+            experta y personalizada. ¡Conéctate con los mejores especialistas desde donde estés!"
+         </p>
          <div class="health_section layout_padding">
             <div class="row">
                <div class="col-sm-7">
                   <div class="image_main">
                      <div class="main">
-                        <img src="img/img-2.png" alt="Avatar" class="image" style="width:100%">
-                     </div>
-                     <div class="middle">
-                        <div class="text"><img src="img/icon-1.png" style="width: 40px;"></div>
+                        <img src="img/der.jpg" alt="Avatar" class="image" style="width:100%">
                      </div>
                   </div>
                </div>
                <div class="col-sm-5">
                   <div class="image_main_1">
                      <div class="main">
-                        <img src="img/img-3.png" alt="Avatar" class="image" style="width:100%">
-                     </div>
-                     <div class="middle">
-                        <div class="text"><img src="img/icon-1.png" style="width: 40px;"></div>
+                        <img src="img/nut.jpg" alt="Avatar" class="image" style="width:650px">
                      </div>
                   </div>
                </div>
             </div>
-            <div class="getquote_bt_1"><a href="#">Read More <span><img src="img/right-arrow.png"></span></a></div>
          </div>
       </div>
    </div>
    <!-- health section end -->
-   <!-- knowledge section end -->
-   <div class="knowledge_section layout_padding">
-      <div class="container">
-         <div class="knowledge_main">
-            <div class="left_main">
-               <h1 class="knowledge_taital">Knowledge of center</h1>
-               <p class="knowledge_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-            <div class="right_main">
-               <div class="play_icon"><a href="#"><img src="img/play-icon.png"></a></div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- knowledge section end -->
+
    <!-- news section start -->
    <div class="news_section layout_padding">
       <div class="container">
-         <h1 class="health_taital">Why choose 24hr home care</h1>
-         <p class="health_text">labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+         <h1 class="health_taital">Precios</h1>
+         <p class="health_text">En Consultorio Médico online tu economía es muy importante. Por eso te ofrecemos los mejores precios del mercado.</p>
          <div class="news_section_2 layout_padding">
             <div class="row">
                <div class="col-lg-4 col-sm-6">
                   <div class="box_main">
-                     <div class="icon_1"><img src="img/icon-2.png"></div>
-                     <h4 class="daily_text">Daily care experts</h4>
+                     <div class="icon_1"><img src="img/precio1.jpg"></div>
+                     <h4 class="daily_text">Entre semana</h4>
+                     <p>
+                        $125 <br>
+                        9 AM a 9 PM
+                     </p>
                   </div>
                </div>
                <div class="col-lg-4 col-sm-6">
                   <div class="box_main active">
-                     <div class="icon_1"><img src="img/icon-3.png"></div>
-                     <h4 class="daily_text_1">Available 24/7</h4>
+                     <div class="icon_1"><img src="img/precio2.jpg"></div>
+                     <h4 class="daily_text_1">Fin de semana</h4>
+                     <p>
+                        $145 <br>
+                        9 AM a 9 PM
+                     </p>
                   </div>
                </div>
                <div class="col-lg-4 col-sm-6">
                   <div class="box_main">
-                     <div class="icon_1"><img src="img/icon-4.png"></div>
-                     <h4 class="daily_text_1">Balanced care</h4>
+                     <div class="icon_1"><img src="img/precio3.jpg"></div>
+                     <h4 class="daily_text_1">Nocturno</h4>
+                     <p>
+                        $165 <br>
+                        9 AM a 9 PM
+                     </p>
                   </div>
                </div>
             </div>
          </div>
-         <div class="getquote_bt"><a href="#">Get A Quote <span><img src="img/right-arrow.png"></span></a></div>
       </div>
    </div>
    <!-- news section end -->
    <!-- contact section start -->
    <div class="contact_section layout_padding">
       <div class="container">
-         <h1 class="contact_taital">What we do</h1>
+         <h1 class="contact_taital">Contactanos</h1>
          <div class="news_section_2">
             <div class="row">
                <div class="col-md-6">
                   <div class="icon_main">
                      <div class="icon_7"><img src="img/icon-7.png"></div>
-                     <h4 class="diabetes_text">Diabetes and obesity Counselling </h4>
+                     <h4 class="diabetes_text">Resolvemos todas las dudas que tengas</h4>
                   </div>
                   <div class="icon_main">
                      <div class="icon_7"><img src="img/icon-5.png"></div>
-                     <h4 class="diabetes_text">Obstetrics and Gynsecology</h4>
+                     <h4 class="diabetes_text">Respuestas rapidas</h4>
                   </div>
                   <div class="icon_main">
                      <div class="icon_7"><img src="img/icon-6.png"></div>
-                     <h4 class="diabetes_text">Surgical and medical Oncology</h4>
+                     <h4 class="diabetes_text">Puedes hacerlo las 24 horas</h4>
                   </div>
                </div>
                <div class="col-md-6">
                   <div class="contact_box">
-                     <h1 class="book_text">Book Appoinment</h1>
-                     <input type="text" class="Email_text" placeholder="Name" name="Name">
-                     <input type="text" class="Email_text" placeholder="Name" name="Name">
-                     <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                     <h1 class="book_text">Formulario</h1>
+                     <input type="text" class="Email_text" placeholder="Nombre" name="Name">
+                     <input type="text" class="Email_text" placeholder="Correo" name="Name">
+                     <textarea class="massage-bt" placeholder="Mensaje" rows="5" id="comment" name="Massage"></textarea>
                      <div class="send_bt"><a href="#">SEND</a></div>
                   </div>
                </div>
@@ -275,60 +266,113 @@ if (!isset($_SESSION['usuario'])) {
          <div class="carousel-inner">
             <div class="carousel-item active">
                <div class="container">
-                  <h1 class="client_taital">What People Say</h1>
-                  <p class="client_text">It is a long established fact that a reader will be distracted </p>
+                  <h1 class="client_taital">QUÉ OPINAN NUESTROS PACIENTES</h1>
                   <div class="client_section_2">
                      <div class="client_left">
-                        <div><img src="img/client-img.png" class="client_img"></div>
+                        <div><img src="img/ref.jpg" class="client_img"></div>
                      </div>
                      <div class="client_right">
-                        <h3 class="distracted_text">Distracted by</h3>
-                        <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
-                        <div class="quote_icon"><img src="img/quote-icon.png"></div>
+                        <h3 class="distracted_text">Francisco Lopez</h3>
+                        <p class="lorem_text">Me encantó la atención personalizada. A pesar de ser una consulta en línea, el médico se tomó 
+                           el tiempo necesario para escuchar mis preocupaciones y brindarme orientación médica detallada.</p>
                      </div>
                   </div>
                </div>
             </div>
             <div class="carousel-item">
                <div class="container">
-                  <h1 class="client_taital">What People Say</h1>
-                  <p class="client_text">It is a long established fact that a reader will be distracted </p>
+                  <h1 class="client_taital">QUÉ OPINAN NUESTROS PACIENTES</h1>
                   <div class="client_section_2">
                      <div class="client_left">
-                        <div><img src="img/client-img.png" class="client_img"></div>
+                        <div><img src="img/ref2.jpg" class="client_img"></div>
                      </div>
                      <div class="client_right">
-                        <h3 class="distracted_text">Distracted by</h3>
-                        <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
-                        <div class="quote_icon"><img src="img/quote-icon.png"></div>
+                        <h3 class="distracted_text">Juan Ortiz</h3>
+                        <p class="lorem_text">Increíble conveniencia. Poder acceder a consultas médicas desde la comodidad de
+                            mi hogar ha sido una verdadera bendición, especialmente en días ocupados.</p>
                      </div>
                   </div>
                </div>
             </div>
             <div class="carousel-item">
                <div class="container">
-                  <h1 class="client_taital">What People Say</h1>
-                  <p class="client_text">It is a long established fact that a reader will be distracted </p>
+                  <h1 class="client_taital">QUÉ OPINAN NUESTROS PACIENTES</h1>
                   <div class="client_section_2">
                      <div class="client_left">
-                        <div><img src="img/client-img.png" class="client_img"></div>
+                        <div><img src="img/ref3.jpg" class="client_img"></div>
                      </div>
                      <div class="client_right">
-                        <h3 class="distracted_text">Distracted by</h3>
-                        <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
-                        <div class="quote_icon"><img src="img/quote-icon.png"></div>
+                        <h3 class="distracted_text">Alejandro Dorantes</h3>
+                        <p class="lorem_text">Los precios son realmente asequibles. Pensé que obtener atención médica de calidad en 
+                           línea sería costoso, pero me sorprendió gratamente descubrir que los precios son bastante accesibles, lo que 
+                           hace que la atención médica sea más accesible para todos.</p>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+         <a id="bot" class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
             <i class="fa fa-long-arrow-left" style="font-size:24px; padding-top: 4px;"></i>
          </a>
-         <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+         <a id="bot" class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
             <i class="fa fa-long-arrow-right" style="font-size:24px; padding-top: 4px;"></i>
          </a>
       </div>
    </div>
 
-<?php include 'views/component/footer.php'; ?>
+   <!-- footer section start -->
+   <div class="footer_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-3 col-sm-6">
+
+               <h1 class="adderss_text">Contactanos</h1>
+               <div class="map_icon"><img src="img/map-icon.png"><span class="paddlin_left_0">Cuajimalpa</span></div>
+               <div class="map_icon"><img src="img/call-icon.png"><span class="paddlin_left_0">+5509601271</span></div>
+               <div class="map_icon"><img src="img/mail-icon.png"><span class="paddlin_left_0">volim@gmail.com</span></div>
+            </div>
+            <div class="col-lg-6 col-sm-6">
+               <h1 class="adderss_text">Doctores</h1>
+               <div class="hiphop_text_1">Contamos con un equipo de médicos altamente calificados y experimentados en diversas especialidades,
+                  quienes se comprometen a brindar un trato personalizado y de alta calidad a cada uno de nuestros pacientes.
+               </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+               <h1 class="adderss_text">Siguenos en</h1>
+
+               <div class="social_icon">
+                  <ul>
+                     <li><a href="#"><img src="img/fb-icon.png"></a></li>
+                     <li><a href="#"><img src="img/twitter-icon.png"></a></li>
+                     <li><a href="#"><img src="img/linkedin-icon.png"></a></li>
+                     <li><a href="#"><img src="img/instagram-icon.png"></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- footer section end -->
+   <!-- copyright section start -->
+   <div class="copyright_section">
+      <div class="container">
+         <p class="copyright_text">Hecho por Gatitos</p>
+      </div>
+   </div>
+   <!-- copyright section end -->
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/plugin.js"></script>
+   <!-- sidebar -->
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="js/custom.js"></script>
+   <!-- javascript -->
+   <script src="js/owl.carousel.js"></script>
+   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
+
+</html>
