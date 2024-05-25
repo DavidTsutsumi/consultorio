@@ -20,6 +20,7 @@ $usuarios = $usuario->getAll();
                 <th>Nombre</th>
                 <th>Apellido Paterno</th>
                 <th>Apellido Materno</th>
+                <th>Sexo</th>
                 <th>Usuario</th>
                 <th>Correo Electrónico</th>
                 <th>Teléfono</th>
@@ -33,6 +34,7 @@ $usuarios = $usuario->getAll();
                     <td><?php echo $row['Nombre']; ?></td>
                     <td><?php echo $row['ApellidoPaterno']; ?></td>
                     <td><?php echo $row['ApellidoMaterno']; ?></td>
+                    <td><?php echo $row['Sexo']; ?></td>
                     <td><?php 
                         foreach($usuarios as $usuarioRow) {
                             if ($usuarioRow['IdUsuario'] == $row['IdUsuario']) {

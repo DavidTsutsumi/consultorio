@@ -64,6 +64,7 @@ class PersonaController
     }
 }
 
+// Manejo del formulario POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $action = $_POST['action'];
     $controller = new PersonaController($link);
@@ -72,12 +73,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         case 'create':
             $data = $_POST;
             if ($controller->create($data)) {
-                header("Location: ../../views/persona/indexPersona.php");
+           
+                header("Location: ../views/persona/indexPersona.php");
+                exit; 
             } else {
                 die("Error al crear la persona.");
             }
             break;
-        // Otros casos pueden ser manejados aquí...
+
+        case 'edit':
+            $data = $_POST;
+            $id = $_POST['id'];
+            if ($controller->edit($id, $data)) {
+                
+                header("Location: ../views/persona/indexPersona.php");
+                exit; 
+            } else {
+                die("Error al editar la persona.");
+            }
+            break;
+       
     }
 }
 ?>
