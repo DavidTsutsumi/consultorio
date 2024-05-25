@@ -16,6 +16,8 @@ $row = mysqli_fetch_assoc($result);
         <div class="form-group">
             <label>Nombre</label>
             <input type="text" name="tipo_usuario" class="form-control" value="<?php echo $row['TipoUsuario']; ?>" required>
+            <label>Contraseña</label>
+            <input type="text" name="password" class="form-control" value="<?php echo $row['Password']; ?>" required>
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-primary" value="Actualizar">

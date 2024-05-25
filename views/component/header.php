@@ -40,7 +40,7 @@
    <!-- header section start -->
    <div class="header_section">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-         <div class="logo"><img src="../../img/logo.png" width="50px"></a></div>
+         <div class="logo"><img src="../../img/logo.png" width="80px"></a></div>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
@@ -50,7 +50,7 @@
                   <a class="nav-link" href="../../home.php">Inicio</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="health.html">Citas</a>
+                  <a class="nav-link" href="../../views/cita/indexCita.php">Citas</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="../../views/horario/indexHorario.php">Horarios</a>
@@ -63,9 +63,11 @@
                      Más opciones
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                     <a class="dropdown-item" href="#">Historial médico</a>
+                     <a class="dropdown-item" href="../../views/persona/indexPersona.php">Persona</a>
+                     <a class="dropdown-item" href="../../views/medico/indexMedico.php">Médicos</a>
+                     <a class="dropdown-item" href="../../views/historialMedico/indexHistorialMedico.php">Historial médico</a>
                      <a class="dropdown-item" href="../../views/usuario/indexUsuario.php">Usuarios</a>
-                     <a class="dropdown-item" href="#">Opción 3</a>
+                     <a class="dropdown-item" href="../../views/receta/indexReceta.php">Recetas</a>
                   </div>
                </li>
                <li class="nav-item">

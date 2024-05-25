@@ -21,7 +21,7 @@ if (!isset($_SESSION['usuario'])) {
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>Sistema CRUD</title>
+   <title>Sistema Médico</title>
    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
    <meta name="keywords" content="">
    <meta name="description" content="">
@@ -48,7 +48,7 @@ if (!isset($_SESSION['usuario'])) {
    <!-- header section start -->
    <div class="header_section">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-         <div class="logo"><img src="img/logo.png" width="50px"></a></div>
+         <div class="logo"><img src="img/logo.png" width="80px"></a></div>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
@@ -58,7 +58,7 @@ if (!isset($_SESSION['usuario'])) {
                   <a class="nav-link" href="home.php">Inicio</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="health.html">Citas</a>
+                  <a class="nav-link" href="views/cita/indexCita.php">Citas</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="views/horario/indexHorario.php">Horarios</a>
@@ -71,9 +71,11 @@ if (!isset($_SESSION['usuario'])) {
                      Más opciones
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                     <a class="dropdown-item" href="#">Historial médico</a>
+                     <a class="dropdown-item" href="views/persona/indexPersona.php">Persona</a>
+                     <a class="dropdown-item" href="views/medico/indexMedico.php">Médicos</a>
+                     <a class="dropdown-item" href="views/historialMedico/indexHistorialMedico.php">Historial médico</a>
                      <a class="dropdown-item" href="views/usuario/indexUsuario.php">Usuarios</a>
-                     <a class="dropdown-item" href="#">Opción 3</a>
+                     <a class="dropdown-item" href="views/receta/indexReceta.php">Recetas</a>
                   </div>
                </li>
                <li class="nav-item">
