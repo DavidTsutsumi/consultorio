@@ -63,15 +63,5 @@ class Persona
         }
         return false;
     }
-    
-    public function getAllWithTipoUsuario()
-    {
-        $sql = "SELECT u.IdUsuario, CONCAT(u.IdUsuario, ' - ', u.TipoUsuario) AS Usuario FROM Usuarios u";
-        $result = mysqli_query($this->db, $sql);
-        if (!$result) {
-            die('Error en la consulta: ' . mysqli_error($this->db));
-        }
-        return $result;
-    }
-    
 }
+?>

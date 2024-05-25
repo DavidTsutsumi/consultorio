@@ -24,36 +24,60 @@ class PersonaController
         return $this->persona->getById($id);
     }
 
-    public function create($idUsuario, $nombre, $apellidoPaterno, $apellidoMaterno, $fechaNac, $sexo, $correoElec, $telefono)
+    public function create($data)
     {
-        if ($this->persona->create($idUsuario, $nombre, $apellidoPaterno, $apellidoMaterno, $fechaNac, $sexo, $correoElec, $telefono)) {
-            return true;
-        } else {
-            die("Error al crear la persona.");
-        }
+        return $this->persona->create(
+            $data['idUsuario'], 
+            $data['nombre'], 
+            $data['apellidoPaterno'], 
+            $data['apellidoMaterno'], 
+            $data['fechaNac'], 
+            $data['sexo'], 
+            $data['correoElec'], 
+            $data['telefono']
+        );
     }
 
-    public function edit($id, $idUsuario, $nombre, $apellidoPaterno, $apellidoMaterno, $fechaNac, $sexo, $correoElec, $telefono)
+    public function edit($id, $data)
     {
-        if ($this->persona->update($id, $idUsuario, $nombre, $apellidoPaterno, $apellidoMaterno, $fechaNac, $sexo, $correoElec, $telefono)) {
-            return true;
-        } else {
-            die("Error al actualizar la persona.");
-        }
+        return $this->persona->update(
+            $id, 
+            $data['idUsuario'], 
+            $data['nombre'], 
+            $data['apellidoPaterno'], 
+            $data['apellidoMaterno'], 
+            $data['fechaNac'], 
+            $data['sexo'], 
+            $data['correoElec'], 
+            $data['telefono']
+        );
     }
 
     public function delete($id)
     {
-        if ($this->persona->delete($id)) {
-            return true;
-        } else {
-            die("Error al eliminar la persona.");
-        }
+        return $this->persona->delete($id);
     }
 
     public function getUsuarios()
     {
-        return $this->persona->getAllWithTipoUsuario();
+        return $this->usuario->getAll();
     }
 }
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $action = $_POST['action'];
+    $controller = new PersonaController($link);
+
+    switch ($action) {
+        case 'create':
+            $data = $_POST;
+            if ($controller->create($data)) {
+                header("Location: ../../views/persona/indexPersona.php");
+            } else {
+                die("Error al crear la persona.");
+            }
+            break;
+        // Otros casos pueden ser manejados aquí...
+    }
+}
+?>
