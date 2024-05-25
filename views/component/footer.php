@@ -7,7 +7,7 @@
                <h1 class="adderss_text">Contactanos</h1>
                <div class="map_icon"><img src="../../img/map-icon.png"><span class="paddlin_left_0">Cuajimalpa</span></div>
                <div class="map_icon"><img src="../../img/call-icon.png"><span class="paddlin_left_0">+5509601271</span></div>
-               <div class="map_icon"><img src="../../img/mail-icon.png"><span class="paddlin_left_0">volim@gmail.com</span></div>
+               <div class="map_icon"><img src="../../img/mail-icon.png"><span class="paddlin_left_0">soporte@gmail.com</span></div>
             </div>
             <div class="col-lg-6 col-sm-6">
                <h1 class="adderss_text">Doctores</h1>

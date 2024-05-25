@@ -2,11 +2,17 @@
 include '../../views/component/header.php'; 
 require_once '../../config.php';
 require_once '../../models/Persona.php';
+require_once '../../models/Usuario.php'; // Asegúrate de incluir el modelo de Usuario
 
 $persona = new Persona($link);
 $id = $_GET['id'];
 $result = $persona->getById($id);
 $row = mysqli_fetch_assoc($result);
+
+$usuario = new Usuario($link); 
+$userResult = $usuario->getById($row['IdUsuario']); 
+$userRow = mysqli_fetch_assoc($userResult); 
+
 ?>
 <div class="container">
     <h2>Ver Persona</h2>
@@ -16,7 +22,7 @@ $row = mysqli_fetch_assoc($result);
     </div>
     <div class="form-group">
         <label>Usuario</label>
-        <p class="form-control"><?php echo $row['IdUsuario']; ?></p>
+        <p class="form-control"><?php echo $userRow['TipoUsuario']; ?></p> 
     </div>
     <div class="form-group">
         <label>Nombre</label>

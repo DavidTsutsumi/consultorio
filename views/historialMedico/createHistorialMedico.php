@@ -21,11 +21,11 @@ $personas = $persona->getAll();
             </select>
         </div>
         <div class="form-group">
-            <label>Estatura</label>
+            <label>Estatura (cm)</label>
             <input type="number" step="0.01" name="estatura" class="form-control" required>
         </div>
         <div class="form-group">
-            <label>Peso</label>
+            <label>Peso (kg)</label>
             <input type="number" step="0.01" name="peso" class="form-control" required>
         </div>
         <div class="form-group">

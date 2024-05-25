@@ -1,13 +1,16 @@
 <?php
-class Persona {
+class Persona
+{
     private $db;
     private $table = 'Personas';
 
-    public function __construct($db) {
+    public function __construct($db)
+    {
         $this->db = $db;
     }
 
-    public function getAll() {
+    public function getAll()
+    {
         $sql = "SELECT * FROM " . $this->table;
         $result = mysqli_query($this->db, $sql);
         if (!$result) {
@@ -16,7 +19,8 @@ class Persona {
         return $result;
     }
 
-    public function getById($id) {
+    public function getById($id)
+    {
         $sql = "SELECT * FROM " . $this->table . " WHERE IdPersona = ?";
         if ($stmt = mysqli_prepare($this->db, $sql)) {
             mysqli_stmt_bind_param($stmt, "i", $id);
@@ -30,7 +34,8 @@ class Persona {
         return false;
     }
 
-    public function create($idUsuario, $nombre, $apellidoPaterno, $apellidoMaterno, $fechaNac, $sexo, $correoElec, $telefono) {
+    public function create($idUsuario, $nombre, $apellidoPaterno, $apellidoMaterno, $fechaNac, $sexo, $correoElec, $telefono)
+    {
         $sql = "INSERT INTO " . $this->table . " (IdUsuario, Nombre, ApellidoPaterno, ApellidoMaterno, FechaNac, Sexo, CorreoElec, Telefono) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         if ($stmt = mysqli_prepare($this->db, $sql)) {
             mysqli_stmt_bind_param($stmt, "isssssss", $idUsuario, $nombre, $apellidoPaterno, $apellidoMaterno, $fechaNac, $sexo, $correoElec, $telefono);
@@ -39,7 +44,8 @@ class Persona {
         return false;
     }
 
-    public function update($id, $idUsuario, $nombre, $apellidoPaterno, $apellidoMaterno, $fechaNac, $sexo, $correoElec, $telefono) {
+    public function update($id, $idUsuario, $nombre, $apellidoPaterno, $apellidoMaterno, $fechaNac, $sexo, $correoElec, $telefono)
+    {
         $sql = "UPDATE " . $this->table . " SET IdUsuario = ?, Nombre = ?, ApellidoPaterno = ?, ApellidoMaterno = ?, FechaNac = ?, Sexo = ?, CorreoElec = ?, Telefono = ? WHERE IdPersona = ?";
         if ($stmt = mysqli_prepare($this->db, $sql)) {
             mysqli_stmt_bind_param($stmt, "isssssssi", $idUsuario, $nombre, $apellidoPaterno, $apellidoMaterno, $fechaNac, $sexo, $correoElec, $telefono, $id);
@@ -48,7 +54,8 @@ class Persona {
         return false;
     }
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $sql = "DELETE FROM " . $this->table . " WHERE IdPersona = ?";
         if ($stmt = mysqli_prepare($this->db, $sql)) {
             mysqli_stmt_bind_param($stmt, "i", $id);
@@ -56,5 +63,15 @@ class Persona {
         }
         return false;
     }
+    
+    public function getAllWithTipoUsuario()
+    {
+        $sql = "SELECT u.IdUsuario, CONCAT(u.IdUsuario, ' - ', u.TipoUsuario) AS Usuario FROM Usuarios u";
+        $result = mysqli_query($this->db, $sql);
+        if (!$result) {
+            die('Error en la consulta: ' . mysqli_error($this->db));
+        }
+        return $result;
+    }
+    
 }
-?>
